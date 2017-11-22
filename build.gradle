@@ -1,0 +1,29 @@
+group 'org.twj.component.testing'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
+
+jettyRun{
+    contextPath = "spring4"
+    httpPort = 8080
+}
+
+jettyRunWar{
+    contextPath = "spring4"
+    httpPort = 8080
+}
