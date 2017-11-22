@@ -15,6 +15,8 @@ repositories {
 dependencies {
     compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.8.RELEASE'
+    testCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
 
 }
 
