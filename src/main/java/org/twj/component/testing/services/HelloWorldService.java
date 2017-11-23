@@ -1,4 +1,4 @@
-package org.twj.component.testing;
+package org.twj.component.testing.services;
 
 import org.springframework.stereotype.Component;
 

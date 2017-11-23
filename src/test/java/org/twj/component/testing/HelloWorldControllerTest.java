@@ -2,12 +2,9 @@ package org.twj.component.testing;
 
 import org.junit.After;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.twj.component.testing.services.HelloWorldService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -16,10 +13,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.util.ReflectionTestUtils.setField;
 
-@RunWith(SpringRunner.class)
-@ContextConfiguration(locations = {"classpath:spring-app.xml"})
-@WebAppConfiguration
-public class HelloWorldControllerTest {
+
+public class HelloWorldControllerTest extends BaseTest {
 
     @Test
     public void should_pass(){
