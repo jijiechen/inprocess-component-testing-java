@@ -8,11 +8,8 @@ import org.twj.component.testing.models.Employee;
 import org.twj.component.testing.repositories.EmployeeRepository;
 import org.twj.component.testing.services.EmployeeDisplayService;
 
-import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 @Controller
 public class DbDependencyController {
