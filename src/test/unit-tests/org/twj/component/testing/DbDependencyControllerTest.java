@@ -13,7 +13,6 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 
-@DataJpaTest
 public class DbDependencyControllerTest extends BaseTest {
 
 
