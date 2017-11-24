@@ -37,4 +37,15 @@ public class DbDependencyControllerTest extends BaseTest {
         assertEquals("Kite", employees.get(1).getName());
     }
 
+    @Test
+    @Transactional
+    public void should_serve_transformed_employee_display_name_from_in_mem_db() throws IOException {
+        this.entityManager.persist(new Employee("Jim", "1234"));
+        this.entityManager.persist(new Employee("Kite", "3456"));
+
+        String displayName = dbDependencyCtrl.getEmployeeName("3456");
+
+        assertEquals("Kite3456", displayName);
+    }
+
 }
